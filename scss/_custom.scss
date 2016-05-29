@@ -1,0 +1,31 @@
+// Written by Sander van Kasteel
+// License : GNU/GPL version 2
+
+// Variable declaration
+$red: #C12127;
+
+// -- Topbar overrides
+.top-bar {
+    background-color: $red;
+}
+
+.top-bar ul {
+    background-color: $red;
+}
+
+.top-bar-title {
+    color: white;
+}
+
+a {
+    //color: white;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: black;
+}
+
+.main-logo {
+    padding: 25px 0;
+}
