@@ -2,30 +2,70 @@
 // License : GNU/GPL version 2
 
 // Variable declaration
-$red: #C12127;
-
+//$red: #C12127;
+//
 // -- Topbar overrides
 .top-bar {
-    background-color: $red;
-}
+    background-color: $black;
 
-.top-bar ul {
-    background-color: $red;
-}
+    a {
+        text-decoration: none;
 
-.top-bar-title {
-    color: white;
+        &:hover {
+            color: $primary-color;
+            text-decoration: underline;
+        }
+    }
+
+    strong {
+        color: $white;
+    }
+
+    ul {
+        background: $black;
+        color: $white;
+    }
 }
 
 a {
-    //color: white;
     text-decoration: underline;
+
+    &:hover {
+        color: $black;
+    }
 }
 
-a:hover {
-    color: black;
+.switch {
+    float: left;
+    margin-right: .5rem;
+}
+
+.switch-text h5 {
+    line-height: 30px;
 }
 
 .main-logo {
     padding: 25px 0;
+}
+// For small screens
+@media screen and (max-width: 39.9375em) {
+    .top-bar-title {
+        strong {
+            margin-left: 6px;
+        }
+
+        .menu {
+            padding-top: 5px;
+        }
+    }
+
+}
+
+// For medium and large screens
+@media screen and (min-width: 40em) {
+    .top-bar {
+        .top-bar-title {
+            margin-top: 7px;
+        }
+    }
 }

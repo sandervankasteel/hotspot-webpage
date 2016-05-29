@@ -8,37 +8,36 @@
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-  <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium large">
-      <button class="menu-icon" type="button" data-toggle></button>
-      <div class="title-bar-title">Menu</div>
+  <div class="top-bar">
+    <div class="top-bar-title">
+    <span data-responsive-toggle="responsive-menu" data-hide-for="medium">
+      <button class="menu-icon light" type="button" data-toggle></button>
+    </span>
+      <strong>Site Title</strong>
     </div>
-
-    <div class="top-bar" id="example-menu">
+    <div id="responsive-menu">
       <div class="top-bar-left">
-        <ul class="vertical dropdown menu" data-dropdown-menu>
-          <li class="menu-text">Site Title</li>
-          <li>
-            <a href="#">One</a>
-            <ul class="menu vertical">
-              <li><a href="#">One</a></li>
-              <li><a href="#">Two</a></li>
-              <li><a href="#">Three</a></li>
-            </ul>
-          </li>
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li><a href="#">One</a></li>
           <li><a href="#">Two</a></li>
           <li><a href="#">Three</a></li>
         </ul>
       </div>
     </div>
-
+  </div>
 
   <!-- LOGO -->
-
-    <div class="row">
-      <div class="small-12 large-6 small-centered columns">
-        <img src="http://jedi-counsel.net/s/startrek/gif/starfleet/STARFLEET-Logo-Classic-2-color.png" class="main-logo"/>
-      </div>
+  <div class="row">
+    <div class="small-12 large-6 small-centered columns">
+      <img src="http://jedi-counsel.net/s/startrek/gif/starfleet/STARFLEET-Logo-Classic-2-color.png" class="main-logo"/>
     </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 large-12 small-centered large-centered columns">
+      <h1>Welcome to $gatewayname</h1>
+    </div>
+  </div>
 
   <!-- Main text -->
   <div class="row">
@@ -61,8 +60,13 @@
     </div>
     <div class="row">
       <div class="small-12 large-4 small-centered large-centered large-text-center columns">
-        <input type="checkbox" class="switch" id="terms" required>
-        <label for="terms">I agree with the <a href="#">terms and services</a></label>
+        <!--<input type="checkbox" class="switch" id="terms" required>-->
+        <!--<label for="terms">I agree with the <a href="terms.html">terms and services</a></label>-->
+        <div class="switch">
+          <input class="switch-input" id="exampleSwitch" type="checkbox" name="exampleSwitch">
+          <label class="switch-paddle" for="exampleSwitch"></label>
+        </div>
+        <label class="switch-text"><h5>I agree with the <a href="terms.html">terms and services</a></h5></label>
       </div>
     </div>
 
@@ -70,7 +74,7 @@
       <div class="small-12 large-4 small-centered large-centered large-text-center columns">
           <input type='hidden' name='tok' value='$tok'>
           <input type='hidden' name='redir' value='$redir'>
-          <input type='submit' value='Click Here to Enter' class="large success button expanded">
+          <input type='submit' value='Enjoy your free WiFi' class="large success button expanded">
       </div>
     </div>
   </form>
