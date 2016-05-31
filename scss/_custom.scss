@@ -1,12 +1,15 @@
 // Written by Sander van Kasteel
 // License : GNU/GPL version 2
 
-// Variable declaration
-//$red: #C12127;
-//
 // -- Topbar overrides
 .top-bar {
     background-color: $black;
+
+    .menu {
+        @include breakpoint(small only) {
+            padding-top: 5px;
+        }
+    }
 
     a {
         text-decoration: none;
@@ -24,6 +27,18 @@
     ul {
         background: $black;
         color: $white;
+
+    }
+}
+.menu > li > a {
+    @include breakpoint(small only) {
+        padding: 0.7rem 1rem 0 0;
+    }
+}
+
+.menu > li > a:first-child {
+    @include breakpoint(small only) {
+        padding-left: 0.2rem;
     }
 }
 
@@ -52,10 +67,6 @@ a {
     .top-bar-title {
         strong {
             margin-left: 6px;
-        }
-
-        .menu {
-            padding-top: 5px;
         }
     }
 
