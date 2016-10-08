@@ -7,7 +7,7 @@ command -v npm >/dev/null 2>&1 || {
 }
 
 # Ask if the user wants to remove the current release directory
-if [ -d "release" ] then
+if [ -d "release" ]; then
 	while true; do
 		read -p "Do you want to remove the current release?" yn
 		case $yn in
@@ -19,12 +19,13 @@ if [ -d "release" ] then
 fi
 
 # Create a release directory if it doesn't exist yet
-if [ -d "release" ] then
+if [ -d "release" ]; then
 	mkdir release
 fi
 
 # Running the SCSS compiler
 echo "Compiling SCSS files to CSS files"
+npm run build >> /dev/null
 
 # Copy all the necesarry HTML files
 echo "Copying HTML files ...";
@@ -37,18 +38,18 @@ echo "Setting paths for the JavaScript, CSS and image files";
 echo "Copying JavaScript files ...";
 
 # Create the JS directoy if doesnt exist, then create it
-if [ -d "/release/js" ] then
+if [ -d "/release/js" ]; then
 	mkdir release/js
 if
 
 # Create the CSS directoy if doesnt exist, then create it
-echo "Copying CSS files ...";
-if [ -d "release/css" ] then
+echo "Copying CSS files";
+if [ -d "release/css" ]; then
 	mkdir release/css
 fi
 
 # Create the images directoy if doesnt exist, then create it
-echo "Copying images ...";
-if [ -d "release/images"] then
+echo "Copying images";
+if [ -d "release/images" ]; then
 	mkdir release/images
 fi
