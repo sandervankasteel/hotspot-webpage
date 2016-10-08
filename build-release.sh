@@ -42,13 +42,13 @@ if [ -d "/release/js" ] then
 if
 
 # Create the CSS directoy if doesnt exist, then create it
-echo "Copying CSS files";
+echo "Copying CSS files ...";
 if [ -d "release/css" ] then
 	mkdir release/css
 fi
 
 # Create the images directoy if doesnt exist, then create it
-echo "Copying images";
+echo "Copying images ...";
 if [ -d "release/images"] then
 	mkdir release/images
 fi
